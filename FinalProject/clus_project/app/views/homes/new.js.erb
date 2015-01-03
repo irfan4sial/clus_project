@@ -1,0 +1,19 @@
+$("#home_modal").html("<%= escape_javascript(render "homes/form" )%>");
+$("#home_modal").modal("show");
+com.appsgenii.HomesNew.init();
+
+//$(document).ready(function(){
+//    alert("df")
+//    $('.new_home').validate({
+//        rules: {
+//            'home[name]': {
+//                required: true
+//            }
+//        },
+//        messages:{
+//            'home[name]':{
+//                required: "Please enter name"
+//            }
+//        }
+//    });
+//});

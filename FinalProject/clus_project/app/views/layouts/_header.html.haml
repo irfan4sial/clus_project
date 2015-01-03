@@ -1,0 +1,23 @@
+.layout_header
+  .left_panel left
+  .center_panel center
+  .right_panel
+    - if user_signed_in?
+      %ul
+        %li
+          =link_to('Logout', destroy_user_session_path, :method=>'delete')
+    - else
+      %ul
+        %li
+          = link_to "Sign up", new_user_registration_path,:remote => true, title: "New Form", "data-toggle" => "modal", "data-target" => "#user_modal", :id => "signup_id", "data-backdrop"=>"static", "data-keyboard"=>"false"
+        %li
+          = link_to "Login", new_user_session_path, :remote => true , title: "Login Form", "data-toggle" => "modal", "data-target" => "#login_modal" , :id => "login_id", "data-backdrop"=>"static", "data-keyboard"=>"false"
+        %li
+          = link_to "home", new_home_path, :remote => true , title: "New Form", "data-toggle" => "modal", "data-target" => "#home_modal" , :id => "home_link_id", "data-backdrop"=>"static", "data-keyboard"=>"false"
+        %li
+          = link_to "sport", new_sport_path, :remote => true , title: "New Form", "data-toggle" => "modal", "data-target" => "#sport_modal" , :id => "sport_link_id", "data-backdrop"=>"static", "data-keyboard"=>"false"
+
+#home_modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+#user_modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+#login_modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+#sport_modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}

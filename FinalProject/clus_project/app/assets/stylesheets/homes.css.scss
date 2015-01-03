@@ -1,0 +1,95 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.modal-dialog.home_dialog_modal .modal-header{
+  background-color: lightblue;
+}
+.modal-dialog.home_dialog_modal .modal-footer{
+  background-color: lightblue;
+}
+.modal-dialog.home_dialog_modal .modal-body{
+  background-color: lightgray;
+  height: 500px;
+}
+.modal-backdrop, .modal-backdrop.fade.in{
+  opacity: .4;
+}
+#home-modal.modal.fade.in{
+//  top: 30px;
+//  width: 900px;
+//  margin-left: 165px;
+//  left: 0;
+}
+#sport-modal.modal.fade.in{
+  //  top: 30px;
+  //  width: 900px;
+  //  margin-left: 165px;
+  //  left: 0;
+}
+.modal-body.home_register .left_panel{
+  float: left;
+}
+.modal-body.home_register .right_panel{
+  float: right;
+}
+.layout_header{ width: 100%;
+  height: 100px;
+  background-color: #2a2a2a;
+  opacity: 0.9;
+
+}
+.layout_header .left_panel{ float: left; width: 400px}
+.layout_header .center_panel{float: left; width: 400px}
+.layout_header .right_panel{float: right; width: 480px}
+.layout_header .right_panel ul li{ list-style: none; display: inline-block; text-decoration: none; padding-top: 10px;
+  width: 100px;
+  height: 50px;
+}
+.layout_header .right_panel ul{ display: block}
+
+.layout_header .right_panel ul li a:hover{
+  color: white !important;
+  background-color: #C03612;
+  border-radius: 5px;
+}
+.layout_header .right_panel ul li a{
+  display: block;
+  color: #ffffff !important;
+  text-decoration: none;
+  text-align: center;
+  width: 100px !important;
+  height: 50px !important;
+  line-height: 50px;
+
+}
+.layout_header .right_panel ul li a#new_user_register{
+  width: 100px !important;
+  height: 50px !important;
+  text-align: center;
+}
+body{
+  width: 100%;
+  height: 630px;
+  background: url(/assets/header_bg.png) fixed top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+#sport_modal{
+  //height: 300px !important;
+}
+#user_modal{
+ // height: 300px !important;
+}
+#user_modal .modal{
+  top: 20% !important;
+}
+#user_modal .modal.fade{
+  top: 20% !important;
+}
+#login_modal{
+  //height: 300px !important;
+}
+.modal.fade{
+  top: 0%;
+}

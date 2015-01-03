@@ -1,0 +1,8 @@
+console.log("create signin");
+<% if success %>
+alert('success');
+window.location = "<%= root_path() %>"
+<%else%>
+alert('fail');
+//$('#message_display').html('Sorry! Email or password invalid')
+<%end%>

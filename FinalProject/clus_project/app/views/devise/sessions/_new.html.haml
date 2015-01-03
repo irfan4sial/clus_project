@@ -1,0 +1,48 @@
+-#:javascript
+-#  $(document).ready(function(){
+-#    $("#sign_in_user").validate({
+-#      rules: {
+-#        'user[email]': {
+-#          required: true,
+-#          email: true
+-#          //remote: "/homes/verify_email_login"
+-#        }
+-#      },
+-#      messages: {
+-#        'user[email]': {
+-#          required: "Please enter email",
+-#          email: "Email format is not correct",
+-#          remote: "Email does not exist."
+-#          }
+-#      }
+-#
+-#    });
+-#  });
+.modal-dialog.login_form
+  .modal-content
+    .modal-header
+      .modal-title
+        = "Log in"
+    .modal-body
+      #error_message_display
+      #message_display
+      = form_for(resource, as: resource_name,:remote => true ,url: session_path(resource_name), :html => {:id =>  'sign_in_user'}) do |f|
+        .field
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true
+        .field
+          = f.label :password
+          %br/
+          = f.password_field :password, autocomplete: "off"
+        - if devise_mapping.rememberable?
+          .field
+            = f.check_box :remember_me
+            = f.label :remember_me
+        .actions
+          = f.submit "Log in", :id => 'login_btn_id'
+    .modal-footer
+      = link_to "forgot password",new_password_path(resource_name),{title: "New Form", "data-toggle" => "modal", "data-target" => "#forgot-modal" ,:remote => true, :id => "forgot_link_id"}
+#forgot-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+
+

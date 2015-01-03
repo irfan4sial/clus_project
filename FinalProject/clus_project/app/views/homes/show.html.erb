@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @home.name.html_safe %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag  @home.image_url(:small).to_s %>
+</p>
+
+<%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Back', homes_path %>

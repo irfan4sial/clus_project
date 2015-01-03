@@ -1,0 +1,13 @@
+<h1>Editing home</h1>
+
+<%= @home.name.html_safe %>
+<input type="button" value="Save Me" id="show_editor">
+<%= form_for @home, :remote => true do |f|%>
+    <%= f.text_area :name%>
+    <%= f.submit "Save"%>
+<%end%>
+<%#= render 'form' %>
+
+
+<%= link_to 'Show', @home %> |
+<%= link_to 'Back', homes_path %>
